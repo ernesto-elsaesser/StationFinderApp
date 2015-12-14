@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8092"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Stations_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <table alignment="left" id="ya8-UY-93q">
+                            <items>
+                                <tableRow identifier="StationRow" selectable="NO" id="F9a-tB-aFU" customClass="StationRow" customModule="Stations_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="31.5" alignment="left" layout="vertical" spacing="0.0" id="IBj-DM-RGQ">
+                                        <items>
+                                            <label alignment="left" text="Name" minimumScaleFactor="0.5" id="ycw-3i-VpG">
+                                                <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                            </label>
+                                            <label alignment="left" text="Distance" id="oLW-uj-s5k">
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="lblDistance" destination="oLW-uj-s5k" id="9fZ-tw-coG"/>
+                                        <outlet property="lblName" destination="ycw-3i-VpG" id="guz-e7-oHI"/>
+                                    </connections>
+                                </tableRow>
+                                <tableRow identifier="StatusRow" selectable="NO" id="2En-5I-sOy" customClass="StatusRow" customModule="Stations_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="32.5" alignment="left" layout="vertical" id="uHu-Py-Dvu">
+                                        <items>
+                                            <label width="135" height="52" alignment="left" text="Status" textAlignment="center" baselineAdjustment="alignCenters" minimumScaleFactor="0.5" id="Vjw-yj-PPB"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="lblStatus" destination="Vjw-yj-PPB" id="5Pu-SY-qvh"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="stationTable" destination="ya8-UY-93q" id="eoV-4r-4oh"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="325" y="218"/>
+        </scene>
+    </scenes>
+</document>
